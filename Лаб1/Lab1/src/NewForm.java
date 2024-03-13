@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -19,8 +20,9 @@ public class NewForm {
     private JTable table1;
     private JScrollPane scrollPane1;
     DefaultTableModel model = (DefaultTableModel) table1.getModel();
-    
+
     public NewForm() {
+        AddButton.setPreferredSize(new Dimension(45,65));
         CalcButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
