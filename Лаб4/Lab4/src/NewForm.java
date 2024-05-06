@@ -42,7 +42,14 @@ public class NewForm {
                             step = Double.parseDouble(table1.getValueAt(row, 0).toString());
                             b = Double.parseDouble(table1.getValueAt(row, 1).toString());
                             a = Double.parseDouble(table1.getValueAt(row, 2).toString());
+
+                            long start = System.currentTimeMillis();
                             res = Main.Integral(a, b, step);
+                            //Thread.sleep(1000);
+                            long finish = System.currentTimeMillis();
+                            long resu = finish - start;
+                            System.out.println("Result: " + resu);
+
                             table1.setValueAt(res, row, 3);
                             //TableList.equals(new Object[]{String.valueOf(step), String.valueOf(b), String.valueOf(a), String.valueOf(res)});
                             RecIntegral temp = TableList.get(row);
